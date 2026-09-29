@@ -85,7 +85,7 @@ mmWave 레이더(IWR6843ISK)만으로 카메라 없이 차량 실내의 위험�
 
 - 두 파이프라인은 **서로 다른 펌웨어**를 쓰므로 센서를 각각 준비해야 합니다. 센서가 하나면 펌웨어를 바꿔가며 한 번에 하나씩 실행합니다.
 - 서버는 `clearance` 이벤트가 와도 바이탈 상태(`source`/`status`/`hr`/`rr`)를 덮어쓰지 않습니다.
-- 모듈별 상세 문서는 `docs/` 폴더에 있습니다.
+- 모듈별 상세 문서는 `docs/04.모듈문서/` 에 있습니다.
 
 ### 3.2. 사용 기술
 
@@ -201,13 +201,12 @@ capstone-2026-team-38/
 ├─ computer_GUI/
 │  ├─ digital_twin/                트윈 서버 + 브라우저 3D 화면
 │  └─ serialhelper.py              시리얼 공통 모듈
-└─ docs/
-   ├─ seat-occupancy.md             좌석 점유·폴딩 모듈 문서
-   ├─ vital-signs.md                바이탈·각성도 모듈 문서
-   ├─ digital-twin.md               트윈 서버·화면 문서
-   ├─ 2026전기_최종보고서_38_쭌혁뀬_....pdf   최종 보고서
-   ├─ 최종발표_38_쭌혁뀬.pptx                 발표 자료
-   └─ 2026포스터_38_쭌혁뀬.pdf                포스터
+├─ docs/
+│  ├─ 01.보고서/                  착수·중간·최종 보고서
+│  ├─ 02.포스터/                  포스터
+│  ├─ 03.발표자료/                발표 자료 (PDF·PPTX)
+│  └─ 04.모듈문서/                모듈별 상세 문서 3종
+└─ install_and_build.sh          설치·실행 스크립트
 ```
 
 ### 4.4. 산업체 멘토링 의견 및 반영 사항
@@ -292,7 +291,7 @@ python gtrack_clearance_demo/main_presence_clearance.py
 
 - 브라우저: 비상 회피 `http://127.0.0.1:8766/`, 시트 폴딩 `http://127.0.0.1:8766/cabin.html`
 - 센서가 하나뿐이면 2)와 3)을 동시에 실행할 수 없습니다. 펌웨어를 바꿔가며 하나씩 실행합니다.
-- 좌석 판정 설정(K=2, F=3초, E=3초)과 실행 옵션은 `docs/seat-occupancy.md` 참고.
+- 좌석 판정 설정(K=2, F=3초, E=3초)과 실행 옵션은 `docs/04.모듈문서/seat-occupancy.md` 참고.
 
 **하드웨어 없이 로직 검증**
 
@@ -319,10 +318,10 @@ python gtrack_clearance_demo/presence_monitor.py
 
 ### 6.1. 프로젝트 소개 자료
 
-- 발표 자료: [최종발표_38_쭌혁뀬.pptx](docs/최종발표_38_쭌혁뀬.pptx)
-- 최종 보고서: [2026전기_최종보고서_38_쭌혁뀬.pdf](docs/2026전기_최종보고서_38_쭌혁뀬_Non-Vision%20기반%20차량%20내부%20위험%20감지%20시스템.pdf)
-- 포스터: [2026포스터_38_쭌혁뀬.pdf](docs/2026포스터_38_쭌혁뀬.pdf)
-- 모듈별 상세 문서: [좌석 점유·폴딩](docs/seat-occupancy.md) · [바이탈·각성도](docs/vital-signs.md) · [디지털 트윈](docs/digital-twin.md)
+- 발표 자료: [PDF](docs/03.발표자료/발표자료.pdf) · [PPTX](docs/03.발표자료/발표자료.pptx)
+- 포스터: [포스터파일.pdf](docs/02.포스터/포스터파일.pdf)
+- 보고서: [착수](docs/01.보고서/01.착수보고서.pdf) · [중간](docs/01.보고서/02.중간보고서.pdf) · [최종](docs/01.보고서/03.최종보고서.pdf)
+- 모듈별 상세 문서: [좌석 점유·폴딩](docs/04.모듈문서/seat-occupancy.md) · [바이탈·각성도](docs/04.모듈문서/vital-signs.md) · [디지털 트윈](docs/04.모듈문서/digital-twin.md)
 
 ### 6.2. 시연 영상
 
